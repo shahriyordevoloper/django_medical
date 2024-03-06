@@ -118,6 +118,7 @@ def user_create(request):
                 dori_miqdor=request.GET.get('dori_miqdor'),
                 is_xuruj=request.GET.get('tarif'),
                 user=request.user,
+                xulosa='',
             )
 
             return JsonResponse({'data':'data'},safe=False)
