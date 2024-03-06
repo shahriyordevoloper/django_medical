@@ -286,7 +286,7 @@ padding-bottom: 20px;
       <tr data-count="{{x.sick.persons.all|length}}">
         <td id="data{{x.sick.id}}">1</td>
      
-                      <td>{{x.sick.username}} {{x.sick.persons.all|length}} </td>
+                      <td> {{x.sick.username}} {{x.sick.persons.all|length}} </td>
                      
                       <td>
                          {% if x.sick.is_xuruj == True %}
@@ -295,7 +295,7 @@ padding-bottom: 20px;
                          yoq
                          {% endif %}
                         </td>
-                      <td>{{x.sick.dori_name}}</td>
+                      <td>{{x.sick.dori_name}} {{x.sick.id}}</td>
                    
                       <td>{{x.sick.dori_miqdor}}</td>
                       <td>{{x.sick.date_times|date:'Y-m-d'}}  | {{x.sick.date_times|time:"h:i"}} </td>
@@ -418,7 +418,7 @@ padding-bottom: 20px;
 
     {% for x in datas|dictsortreversed:'count' %}
     <tr data-count="{{x.sick.persons.all|length}}">
-      <td>{{x.count}}</td>
+      <td >{{x.count}} </td>
                     <td>{{x.sick.username}}</td>
                     <td>
                        {% if x.sick.is_xuruj == True %}

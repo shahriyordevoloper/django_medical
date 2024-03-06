@@ -10,6 +10,7 @@ class Sick(models.Model):
     date_times = models.DateTimeField(auto_now_add=True)
     dori_name = models.CharField( max_length=400)
     dori_miqdor = models.CharField( max_length=400)
+    xulosa = models.CharField( max_length=400)
     def __str__(self):
         return self.username
 
@@ -20,10 +21,7 @@ class Hurujs(models.Model):
     
 
 
-class Xulosa(models.Model):
-    date_times = models.DateTimeField(auto_now_add=True)
-    person = models.ForeignKey(Sick, on_delete=models.CASCADE,related_name='xulosa' )
-    body = models.CharField( max_length=400)
+
 
 
 

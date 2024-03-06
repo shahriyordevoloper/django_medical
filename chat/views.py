@@ -1,5 +1,5 @@
 from django.shortcuts import render ,redirect
-from .models import Sick,Hurujs,Xulosa
+from .models import Sick,Hurujs
 from django.http import HttpResponse,JsonResponse
 import datetime
 from django.core.exceptions import ObjectDoesNotExist
@@ -7,16 +7,19 @@ from django.core.exceptions import ObjectDoesNotExist
 
 def faq(request):
     return render(request ,'mein/faq.html')
+def detail(request,id):
+    sick = Sick.objects.get(id=id)
+    return render(request ,'mein/sick-detail.html',{'sick':sick})
+
 def xulosa(request):
 
     if request.method == 'POST':
         try:
             person_id = request.POST.get('person_id')
+            user =Sick.objects.get(username=person_id)
+            user.xulosa =request.POST.get('body')
+            user.save()
 
-            Xulosa.objects.create(
-                person=Sick.objects.get(username=person_id),
-                body=request.POST.get('body')
-            )
             return redirect("xulosa")
 
         except ObjectDoesNotExist:

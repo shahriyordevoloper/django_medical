@@ -10,6 +10,7 @@ urlpatterns = [
     path("create_huruj/<int:id>/", create_huruj ,name='create_huruj'),
     path("create_huruj1/<int:id>/", create_huruj1 ,name='create_huruj'),
     path("create_huruj2/<int:id>/", create_huruj2 ,name='create_huruj'),
+    path("detail/<int:id>/", detail ,name='detail'),
     
 
     path("register/",user_create ,name='register' ), 
