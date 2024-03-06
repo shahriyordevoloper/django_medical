@@ -1,0 +1,344 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta http-equiv="content-type" content="text/plain; charset=UTF-8"/>
+
+  <title>Medical | Asosiy sahifa</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="/static/assets/img/favicon.png" rel="icon">
+  <link href="/static/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="/static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/static/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/static/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="/static/assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="/static/assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="/static/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="/static/assets/vendor/simple-datatables/style.css " rel="stylesheet">
+
+
+  <!-- Template Main CSS File -->
+  <link href="/static/assets/css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <script src="/static/assets/js/jquery-3.6.1.min.js"></script>
+
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+
+    <div class="load-spinner">
+      <div class="p-1 spinner-grow text-danger" role="status">
+        <span class="visually-hidden">Kutilmoqda...</span>
+      </div>
+      <div class="p-3 spinner-grow text-warning " role="status">
+        <span class="visually-hidden ">Kutilmoqda...</span>
+      </div>
+      <div class="p-4 spinner-grow text-info" role="status">
+        <span class="visually-hidden">Kutilmoqda...</span>
+      </div>
+    </div>
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="/" class="logo d-flex align-items-center">
+        <img src="/static/assets/img/logo.png" alt="">
+        <span class="d-none d-lg-block">Medical</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+    <div class="container">
+      <div class="row" style="float: right;">
+        <div class="col">
+          <form action="" method="post">
+
+            <a type="button" class="btn btn-outline-danger" href="#">Chiqish</a>
+
+        </form>
+        </div>
+      </div>
+    </div>
+  </header><!-- End Header -->
+
+
+</ul>
+
+  <style>
+    #form_update span{
+display: flex;
+flex-direction: column;
+padding-bottom: 20px;
+    }
+    #form_update span label{
+      line-height: 0;
+      padding-bottom: 8px;
+    }
+     .msg{
+        position: fixed;
+        top: 80px;
+        right: 0;
+        width: 30%;
+        animation: run 1s linear ;
+        z-index: 100;
+      }
+      @keyframes run {
+      from{
+          transform: translateX(500px);
+      }
+      to{
+          transform: translateX(-8px);
+      }
+}
+    .nav-item:hover a{
+      transform: scale(1.2);
+    }
+    .nav-item:hover i{
+      margin-left: 20px;
+
+    }
+    .load-spinner{
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 9999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: white;
+    }
+
+  </style>
+
+
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link collapsed " href="{% url 'home' %}">
+          <i class="bi bi-grid"></i>
+          <span>Asosiy sahifa </span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="{% url 'register' %}">
+          <i class="bi bi-person-plus-fill"></i>
+          <span>Ro'yhatga Olish </span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="{% url 'tables_all' %}">
+          <i class="bi bi-people-fill"></i>
+          <span>Umumiy Ro'yxat</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="{% url 'comingtype' %}">
+          <i class="bi bi-person-dash"></i>
+          <span>Talvasa xurujli bemorlar</span>
+        </a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link collapsed" href="{% url 'xulosa' %}">
+          <i class="bi bi-hospital-fill"></i>
+          <span>Elektroentsefalografiya xulosasi</span>
+        </a>
+      </li>
+     <li class="nav-item">
+        <a class="nav-link collapsed" href="{% url 'faq' %}">
+          <i class="bi bi-bookmark"></i>
+          <span>Foydalanish qo`llanmasi</span>
+        </a>
+      </li>
+
+        </ul>
+      </li><!-- End Forms Nav -->
+
+      <!-- End Tables Nav -->
+
+
+      <!-- End Blank Page Nav -->
+
+    </ul>
+
+  </aside><!-- End Sidebar-->
+
+
+
+  <main id="main" class="main">
+<br><center> <h2>Foydalanish qo`llanmasi</h2></center>
+
+  <video controls id="video" class="video">
+    <source src="https://shahriyormedical8.pythonanywhere.com/static/assets/img/video_2024-02-24_19-32-33.mp4" type="video/mp4">
+  </video>
+
+</script>
+
+        </div>
+
+      </div>
+
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.2/css/buttons.dataTables.min.css">
+
+    <script src="/static/assets/js/jquery-3.6.1.min.js"></script>
+    <script src="/static/assets/js/moment_js_2.222.js"></script>
+
+    <script>
+      function filterRows() {
+      var from = $('#datefilterfrom').val();
+      var to = $('#datefilterto').val();
+      let span_from = document.getElementById('from_val');
+      let span_to = document.getElementById('to_val');
+      span_from.innerText = String(from);
+      span_to.innerText = String(to);
+
+      if (!from && !to) { // no value for from and to
+        return;
+      }
+      from = from || '1970-01-01'; // default from to a old date if it is not set
+      to = to || '2999-12-31';
+
+      var dateFrom = moment(from);
+      var dateTo = moment(to);
+
+      $('#testTable tr').each(function(i, tr) {
+        var val = $(tr).find("td:nth-child(4)").text();
+        var dateVal = moment(val, "DD/MM/YYYY");
+        var visible = (dateVal.isBetween(dateFrom, dateTo, null, [])) ? "" : "none"; // [] for inclusive
+        $(tr).css('display', visible);
+
+      });
+    }
+
+    $('#datefilterfrom').on("change", filterRows);
+    $('#datefilterto').on("change", filterRows);
+  </script>
+
+    </section>
+
+  </main><!-- End #main -->
+
+
+  <footer id="footer" class="footer mt-5">
+    <div class="copyright">
+      &copy; Dastur <strong><span><a href="https://www.instagram.com/j.torajonov"> Techmasters Team</a></span></strong>.tomonidan yaratildi
+    </div>
+
+  </footer><!-- End Footer -->
+
+  <script type="text/javascript">
+ function tabletoExcel(table, name) {
+    var uri = 'data:application/vnd.ms-excel;base64,'
+          , template = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>{worksheet}</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table>{table}</table></body></html>'
+          , base64 = function (s) { return window.btoa(unescape(encodeURIComponent(s))); }
+          , format = function (s, c) { return s.replace(/{(\w+)}/g, function (m, p) { return c[p]; }); };
+        if (!table.nodeType) table = document.getElementById(table);
+        var ctx = { worksheet: name || 'Worksheet', table: table.innerHTML };
+        window.location.href = uri + base64(format(template, ctx));
+
+}
+
+  </script>
+
+
+
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="/static/assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="/static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/static/assets/vendor/chart.js/chart.min.js"></script>
+  <script src="/static/assets/vendor/echarts/echarts.min.js"></script>
+  <script src="/static/assets/vendor/quill/quill.min.js"></script>
+  <script src="/static/assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="/static/assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="/static/assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="/static/assets/js/main.js"></script>
+
+
+
+
+
+  <script>
+    $('ul.messages-attendance').hide()
+
+
+    const spinner = document.querySelector(".load-spinner");
+    window.addEventListener('load', () => {
+      spinner.style.opacity = '0';
+
+      setTimeout(() => {
+        spinner.style.display = 'none';
+      }, 200)
+
+    });
+
+
+    var barcode = '';
+    var interval;
+    document.addEventListener('keydown', function(evt) {
+
+        if (interval)
+        clearInterval(interval);
+
+        if (evt.code == 'Enter') {
+            if (barcode)
+                handleBarcode(barcode);
+            barcode = '';
+            return;
+        }
+
+        if (evt.key != 'Shift')
+            barcode += evt.key;
+        interval = setInterval (() => barcode = '', 20);
+
+    });
+
+    function handleBarcode(scanned_barcode) {
+        var client_id = scanned_barcode
+        $.ajax({
+          url: `/client_barcode_came/${scanned_barcode}`,
+          type: "GET",
+          data: {},
+          success: function(response){
+            $('ul.messages-attendance').show()
+            $('span.message-barcode').html(response['status'])
+          }
+        })
+    }
+  </script>
+
+
+
+</body>
+
+</html>

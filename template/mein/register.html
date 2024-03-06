@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Medical | Ro`yxatga olish</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="/static/assets/img/favicon.png" rel="icon">
+  <link href="/static/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- font-awesome  -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="/static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/static/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/static/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="/static/assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="/static/assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="/static/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="/static/assets/vendor/simple-datatables/style.css" rel="stylesheet">
+  
+
+  <!-- Template Main CSS File -->
+  <link href="/static/assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: NiceAdmin - v2.4.1
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  <script src="/static/assets/js/jquery-3.6.1.min.js"></script>
+</head>
+
+<body>
+<style>
+
+</style>
+
+<div>
+  
+</div>
+<div id="alert">
+
+</div>
+
+
+
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="/" class="logo d-flex align-items-center">
+        <img src="/static/assets/img/logo.png" alt="">
+        <span class="d-none d-lg-block">Medical</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+    <div class="container">
+      <div class="row" style="float: right;">
+        <div class="col">
+          <form action="" method="post">
+           
+            <a type="button" class="btn btn-outline-danger" href="#">Chiqish</a>
+            
+        </form>
+        </div>
+      </div>
+    </div>
+  </header><!-- End Header -->
+  
+
+</ul>
+
+  <style>
+     .msg{
+        position: fixed;
+        top: 80px;
+        right: 0;
+        width: 30%;
+        animation: run 1s linear ;
+        z-index: 100;
+      }
+      @keyframes run {
+      from{ 
+          transform: translateX(500px);   
+      }
+      to{
+          transform: translateX(-8px);   
+      }
+}
+    .nav-item:hover a{
+      transform: scale(1.2);
+    }
+    .nav-item:hover i{
+      margin-left: 20px;
+
+    }
+    .load-spinner{
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 9999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: white;      
+    }
+    
+  </style>
+  
+
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link collapsed " href="{% url 'home' %}">
+          <i class="bi bi-grid"></i>
+          <span>Asosiy sahifa </span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="{% url 'register' %}">
+          <i class="bi bi-person-plus-fill"></i>
+          <span>Ro'yhatga Olish </span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="{% url 'tables_all' %}">
+          <i class="bi bi-people-fill"></i>
+          <span>Umumiy Ro'yxat</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="{% url 'comingtype' %}">
+          <i class="bi bi-person-dash"></i>
+          <span>Talvasa xurujli bemorlar</span>
+        </a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link collapsed" href="{% url 'xulosa' %}">
+          <i class="bi bi-hospital-fill"></i>
+          <span>Elektroentsefalografiya xulosasi</span>
+        </a>
+      </li>
+     <li class="nav-item">
+        <a class="nav-link collapsed" href="{% url 'faq' %}">
+          <i class="bi bi-bookmark"></i>
+          <span>Foydalanish qo`llanmasi</span>
+        </a>
+      </li>
+
+        </ul>
+      </li><!-- End Forms Nav -->
+
+      <!-- End Tables Nav -->
+
+
+      <!-- End Blank Page Nav -->
+
+    </ul>
+
+  </aside><!-- End Sidebar-->
+
+
+  
+<script src="/static/assets/js/barcode-3.11.5.js"></script>
+
+
+  <main id="main" class="main">  
+    <div class="pagetitle">
+      <h1>Ro'yxatdan o'tkazish</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="{% url 'home' %}">Asosiy sahifa</a></li>
+          <li class="breadcrumb-item active">Ro'yxatdan o'tkazish</li>
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
+
+
+  
+    <section class="section">
+      <div class="row">
+        <div class=" card-1 col-lg-6  ml-5  " style="margin: 0 auto; float:none;">
+
+
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Ro'yhatdan o'tkazish</h5>
+
+              <!-- Floating Labels Form -->
+      
+                <hr>
+            
+            
+               <form class="row g-3" id="register"  >
+                <div class="col-md-12">
+                  <div class="form-floating">
+                    <input type="text" name="username" class="form-control" id="username" placeholder="Bemorning ism-familyasini kiriting" required>
+                    <label for="floatingName">Ism-Familyasi</label>
+                  </div>
+
+                </div>
+
+
+
+               <br>
+              
+                <div class="col-md-12">
+                  <div class="form-floating">
+                    <input type="text" name="dori" class="form-control" id="dori" placeholder="Dori nomi" required>
+                    <label for="floatingName">Qabul qiladigan dori turi</label>
+                  </div>
+
+                </div>
+                <br>
+                <div class="col-md-12">
+                  <div class="form-floating">
+                    <input type="text" name="dori_miqdor" class="form-control" id="dori_miqdor" placeholder="Dori miqdori" required>
+                    <label for="floatingName">Dori miqdori</label>
+                  </div>
+
+                </div>
+                <br>
+                <div class="col-md-12">
+                  <div class="form-floating mb-3">
+                    <select class="form-select" name="tarif" id="tarif" aria-label="State">
+                     
+                      <option value="True" >Bor</option>
+                      <option selected value="False" >Yoq</option>
+                    </select>
+                    <label for="floatingSelect">Talvasa xuruji </label>
+                  </div>
+                </div>
+                <div class="text-center">
+                   <button  id="btn_get" class="btn btn-primary ">Qo'shish</button>
+                   <!-- <button type="reset" class="btn btn-secondary">Qayta o'rnatish</button> -->
+                 </div>
+
+
+                 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+              </form><!-- End floating Labels Form -->
+           <script>
+
+ document.getElementById('register').addEventListener("submit",(e)=>{
+  e.preventDefault()
+  
+  $.ajax({
+  url: `http://127.0.0.1:8000/register/?username=${document.getElementById('username').value}&dori=${document.getElementById('dori').value}&dori_miqdor=${document.getElementById('dori_miqdor').value}&tarif=${document.getElementById('tarif').value}`,
+  type: "GET",
+  dataType: "json",
+  success: (data) => {
+    document.getElementById('alert').innerHTML = `
+    <div style="position: absolute; top: 10px ; right: 10px; z-index: 2113;  " class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>{{request.user}}</strong> Bemor qoshildi
+
+  </div>
+    `
+    document.getElementById("register").reset()
+    setInterval(() => {
+      document.getElementById('alert').innerHTML = ''
+    location.reload()
+    }, 3000);
+
+    
+
+  },
+  error: (error) => {
+    document.getElementById('alert').innerHTML = `
+    <div style="position: absolute; top: 10px ; right: 10px; z-index: 2113;  " class="alert alert-danger  alert-dismissible fade show" role="alert">
+    <strong>{{request.user}}</strong> Notogri malumot toldirildi iltimos qaytadan toldiring
+
+  </div>
+    `
+
+    setInterval(() => {
+      document.getElementById('alert').innerHTML = ''
+      location.reload()
+
+    }, 3000);
+
+
+  }
+});
+
+
+
+
+
+ })
+
+
+
+
+           </script>
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+    </section>
+
+   
+
+  </main><!-- End #main --> 
+
+
+
+  <footer id="footer" class="footer mt-5">
+    <div class="copyright">
+      &copy; Dastur <strong><span><a href="https://www.instagram.com/j.torajonov"> Techmasters Team</a></span></strong>.tomonidan yaratildi
+    </div>
+   
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="/static/assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="/static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/static/assets/vendor/chart.js/chart.min.js"></script>
+  <script src="/static/assets/vendor/echarts/echarts.min.js"></script>
+  <script src="/static/assets/vendor/quill/quill.min.js"></script>
+  <script src="/static/assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="/static/assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="/static/assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="/static/assets/js/main.js"></script>
+  
+
+  <script>
+
+  </script>

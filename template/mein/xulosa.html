@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Medical | Ro`yxatga olish</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="/static/assets/img/favicon.png" rel="icon">
+  <link href="/static/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- font-awesome  -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="/static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/static/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/static/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="/static/assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="/static/assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="/static/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="/static/assets/vendor/simple-datatables/style.css" rel="stylesheet">
+  
+
+  <!-- Template Main CSS File -->
+  <link href="/static/assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: NiceAdmin - v2.4.1
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  <script src="/static/assets/js/jquery-3.6.1.min.js"></script>
+</head>
+
+<body>
+<style>
+
+</style>
+
+<div>
+  
+</div>
+
+
+
+
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="/" class="logo d-flex align-items-center">
+        <img src="/static/assets/img/logo.png" alt="">
+        <span class="d-none d-lg-block">Medical</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+    <div class="container">
+      <div class="row" style="float: right;">
+        <div class="col">
+          <form action="" method="post">
+           
+            <a type="button" class="btn btn-outline-danger" href="#">Chiqish</a>
+            
+        </form>
+        </div>
+      </div>
+    </div>
+  </header><!-- End Header -->
+  
+
+</ul>
+
+  <style>
+     .msg{
+        position: fixed;
+        top: 80px;
+        right: 0;
+        width: 30%;
+        animation: run 1s linear ;
+        z-index: 100;
+      }
+      @keyframes run {
+      from{ 
+          transform: translateX(500px);   
+      }
+      to{
+          transform: translateX(-8px);   
+      }
+}
+    .nav-item:hover a{
+      transform: scale(1.2);
+    }
+    .nav-item:hover i{
+      margin-left: 20px;
+
+    }
+    .load-spinner{
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 9999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: white;      
+    }
+    
+  </style>
+  
+
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link collapsed " href="{% url 'home' %}">
+          <i class="bi bi-grid"></i>
+          <span>Asosiy sahifa </span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="{% url 'register' %}">
+          <i class="bi bi-person-plus-fill"></i>
+          <span>Ro'yhatga Olish </span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="{% url 'tables_all' %}">
+          <i class="bi bi-people-fill"></i>
+          <span>Umumiy Ro'yxat</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="{% url 'comingtype' %}">
+          <i class="bi bi-person-dash"></i>
+          <span>Talvasa xurujli bemorlar</span>
+        </a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link collapsed" href="{% url 'xulosa' %}">
+          <i class="bi bi-hospital-fill"></i>
+          <span>Elektroentsefalografiya xulosasi</span>
+        </a>
+      </li>
+     <li class="nav-item">
+        <a class="nav-link collapsed" href="{% url 'faq' %}">
+          <i class="bi bi-bookmark"></i>
+          <span>Foydalanish qo`llanmasi</span>
+        </a>
+      </li>
+
+        </ul>
+      </li><!-- End Forms Nav -->
+
+      <!-- End Tables Nav -->
+
+
+      <!-- End Blank Page Nav -->
+
+    </ul>
+
+  </aside><!-- End Sidebar-->
+
+
+  
+<script src="/static/assets/js/barcode-3.11.5.js"></script>
+
+
+  <main id="main" class="main">  
+    <div id="alert" style="position: absolute ; right: 10px;">
+    </div>
+    <div class="pagetitle">
+      <h1>Ro'yxatdan o'tkazish</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="{% url 'home' %}">Asosiy sahifa</a></li>
+          <li class="breadcrumb-item active">Elektroentsefalografiya tekshiruv xulosasini kiritish </li>
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
+
+
+  
+    <section class="section">
+      <div class="row">
+        <div class=" card-1 col-lg-6  ml-5  " style="margin: 0 auto; float:none;">
+
+
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Elektroentsefalografiya tekshiruv xulosasini kiritish</h5>
+
+              <!-- Floating Labels Form -->
+      
+                <hr>
+    
+            
+               <form class="row g-3" id="register" method="POST" >
+                {% csrf_token %}
+                <div class="col-md-12">
+                  <div class="form-floating">
+                    <input required type="text"  class="form-control" id="user" name="person_id" placeholder="Bemorning ism-familyasini kiriting" >
+                    <label for="floatingName">Ism-Familyasi</label>
+                  </div>
+              
+
+
+
+                  <div id="users" style="overflow-y: scroll; max-height: 40vh;" class="form-floating">
+                    {% for x in persons %}
+                      <button onclick="document.getElementById('user').value = this.getAttribute('data-name'), this.parentElement.style.display = 'none' " data-name="{{x}}"   type="button" class="list-group-item bg-primary w-100 text-start  text-white my-1 p-1"> ‎   ‎   ‎  {{x}}</button>
+                    {% endfor %}
+                  </div>
+
+
+                </div>
+
+               <br>
+              
+                <div class="col-md-12">
+                  <div class="form-floating">
+                    <input type="text" name="body" class="form-control" id="dori" placeholder="Dori nomi" required>
+                    <label for="floatingName">Xulosani kiriting</label>
+                  </div>
+
+               <br> <div class="text-center">
+                   <button  id="btn_get" class="btn btn-primary ">Qo'shish</button>
+                   <!-- <button type="reset" class="btn btn-secondary">Qayta o'rnatish</button> -->
+                 </div>
+
+
+
+              </form><!-- End floating Labels Form -->
+<script>
+  document.getElementById("users").style.display = 'none'
+
+document.getElementById("user").addEventListener("input",()=>{
+
+document.getElementById("users").style.display = 'block'
+for (const iterator of  document.getElementById("users").children) {
+
+if (iterator.getAttribute('data-name').includes(document.getElementById("user").value)) {
+  iterator.style.display = 'block'
+}else{
+  iterator.style.display = 'none'
+
+}
+
+ }
+
+if(document.getElementById("user").value.length == 0){
+  document.getElementById("users").style.display = 'none'
+} 
+
+
+
+})
+
+
+'{% if error %}'
+  alert('Username topilmadi')
+'{% endif %}'
+
+
+</script>
+
+
+
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+    </section>
+
+   
+
+  </main><!-- End #main --> 
+
+
+  <footer id="footer" class="footer mt-5">
+    <div class="copyright">
+      &copy; Dastur <strong><span><a href="https://www.instagram.com/j.torajonov"> Techmasters Team</a></span></strong>.tomonidan yaratildi
+    </div>
+   
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="/static/assets/vendor/tinymce/tinymce.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="/static/assets/js/main.js"></script>
+  
+
+  <script>
+
+  </script>

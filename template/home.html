@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+  <div id="data">
+
+
+<!-- {% for x in data %}
+
+  <a href="user/{{x.id}}">
+    {{x}} age: {{x.age}}  
+  </a> <br>
+{% endfor %} -->
+
+
+
+
+{% for x in huruj  %}
+   {{x.name}} {{x.count}}<br>
+{% endfor %}
+
+
+<!-- {% for x in all %}
+  {{x.date_times}} = {{x.id}}<br>
+{% endfor %} -->
+
+
+  </div>
+
+
+
+
+<div style="display: flex; justify-content: space-around;">
+
+<form method="get" >
+    <input placeholder="firstname" required type="text" name="firstname" id="n1"> <br>
+    <input placeholder="lastname" required type="text" name="lastname" id="n2"> <br>
+    <input placeholder="age" required type="number" name="age" maxlength="2" id="n3"> <br>
+    <button>Kasal qoshish</button>
+
+</form>
+
+<form  method="get">
+  <input value="{{request.GET.date_from}}" required name="date_from" type="date" >
+  <input value="{{request.GET.date_to}}" required name="date_to" type="date" >
+
+  <button>Sort</button>
+
+</form>
+
+</div>
+
+
+
+
+<script>
+
+  function Add() {
+    let req = new XMLHttpRequest()
+    req.open('GET',`?firstname=${document.getElementById("n1").value}&lastname=${document.getElementById("n2").value}&age=${document.getElementById("n3").value}`,true)    
+    req.send()
+  }
+
+
+
+
+</script>
+
+
+
+</body>
+</html>
