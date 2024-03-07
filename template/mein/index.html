@@ -283,7 +283,7 @@ padding-bottom: 20px;
 
 
       {% for x in datas|dictsortreversed:'count' %}
-      <tr data-count="{{x.sick.persons.all|length}}">
+      <tr onclick="location.href = '/detail/{{x.sick.id}}/' " data-count="{{x.sick.persons.all|length}}">
         <td id="data{{x.sick.id}}">1</td>
      
                       <td> {{x.sick.username}} {{x.sick.persons.all|length}} </td>

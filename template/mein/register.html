@@ -261,12 +261,13 @@
 
               </form><!-- End floating Labels Form -->
            <script>
-
+let hrefs = location.href
+console.log(hrefs);
  document.getElementById('register').addEventListener("submit",(e)=>{
   e.preventDefault()
   
   $.ajax({
-  url: `http://127.0.0.1:8000/register/?username=${document.getElementById('username').value}&dori=${document.getElementById('dori').value}&dori_miqdor=${document.getElementById('dori_miqdor').value}&tarif=${document.getElementById('tarif').value}`,
+  url: `${hrefs}?username=${document.getElementById('username').value}&dori=${document.getElementById('dori').value}&dori_miqdor=${document.getElementById('dori_miqdor').value}&tarif=${document.getElementById('tarif').value}`,
   type: "GET",
   dataType: "json",
   success: (data) => {
