@@ -283,7 +283,7 @@ padding-bottom: 20px;
 
 
       {% for x in datas|dictsortreversed:'count' %}
-      <tr onclick="location.href = '/detail/{{x.sick.id}}/' " data-count="{{x.sick.persons.all|length}}">
+      <tr  data-count="{{x.sick.persons.all|length}}">
         <td id="data{{x.sick.id}}">1</td>
      
                       <td> {{x.sick.username}} {{x.sick.persons.all|length}} </td>
@@ -314,7 +314,9 @@ padding-bottom: 20px;
                           <a  href=""  data-toggle="modal" data-target="#exampleModalCenter{{x.sick.id}}"><button type="button" class="btn btn-primary">Tahrirlash</button></a>  
                            
                           <a  href="create_huruj/{{x.sick.id}}" ><button type="button" class="btn btn-primary">Huruj qildi</button></a>  
-                      </td>
+                          <button onclick="location.href = '/detail/{{x.sick.id}}/' " type="button" class="btn btn-primary">Bemor haqida</button>
+
+                        </td>
       </tr>
 
       <div class="modal fade" id="exampleModalCenter{{x.sick.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
