@@ -298,7 +298,12 @@
                 <p class="mb-0">Elektroentsefalografiya xulosasi</p>
               </div>
               <div class="col-sm-9">
-                <p class="text-muted mb-0">{{sick.xulosa.all}} </p>
+                {% for x in sick.xulosa.all %}
+                 <br>
+                <p class="text-muted mb-0 "><span class="text-primary"> {{x.date_times|date:'Y-m-d'}}  {{x.date_times|time:'h-i'}}</span>  <br>
+                {{x.body}}
+                </p>
+                {% endfor %}
               </div>
             </div>
 
