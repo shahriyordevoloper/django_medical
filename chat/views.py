@@ -1,5 +1,5 @@
 from django.shortcuts import render ,redirect
-from .models import Sick,Hurujs
+from .models import Sick,Hurujs,Xulosa
 from django.http import HttpResponse,JsonResponse
 import datetime
 from django.core.exceptions import ObjectDoesNotExist
@@ -16,9 +16,11 @@ def xulosa(request):
     if request.method == 'POST':
         try:
             person_id = request.POST.get('person_id')
-            user =Sick.objects.get(username=person_id)
-            user.xulosa =request.POST.get('body')
-            user.save()
+            Xulosa.objects.create(
+                person=Sick.objects.get(username=person_id),
+                body=request.POST.get('body')
+            )
+          
 
             return redirect("xulosa")
 
