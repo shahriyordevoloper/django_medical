@@ -15,7 +15,7 @@ class Sick(models.Model):
 
 
 class Hurujs(models.Model):
-    date_times = models.DateTimeField(auto_now_add=True)
+    date_times = models.DateTimeField()
     person = models.ForeignKey(Sick, on_delete=models.CASCADE,related_name='persons' )
     
 

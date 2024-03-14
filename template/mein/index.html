@@ -313,7 +313,8 @@ padding-bottom: 20px;
                          
                           <a  href=""  data-toggle="modal" data-target="#exampleModalCenter{{x.sick.id}}"><button type="button" class="btn btn-primary">Tahrirlash</button></a>  
                            
-                          <a  href="create_huruj/{{x.sick.id}}" ><button type="button" class="btn btn-primary">Huruj qildi</button></a>  
+                          <a   data-toggle="modal" data-target="#time{{x.sick.id}}" ><button type="button" class="btn btn-primary">Huruj qildi</button></a> 
+
                           <button onclick="location.href = '/detail/{{x.sick.id}}/' " type="button" class="btn btn-primary">Bemor haqida</button>
 
                         </td>
@@ -379,6 +380,21 @@ padding-bottom: 20px;
 <p class="btn btn-secondary">{{x.sick.persons.all|length}} hurujlar mavjud</p>
               <button type="button" class="btn btn-secondary" data-dismiss="modal" >Yopish</button>
             </div>
+          </div>
+        </div>
+
+      </div>
+            
+      <div class="modal fade" id="time{{x.sick.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <center class="m-3">
+              <form action="/create_huruj/{{x.sick.id}}"  method="GET">
+                <h3>Sana va Vaqtni Tanlang</h3>
+                <input  name="times" class="form-control" style="width: 200px;" type="date" >
+                <button class="btn btn-primary mt-3">Saqlash</button>
+              </form>
+            </center>
           </div>
         </div>
 

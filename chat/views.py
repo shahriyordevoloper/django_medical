@@ -75,11 +75,13 @@ def home(request):
 
 
 def create_huruj(request,id):
-    print(request)
     sick = Sick.objects.get(id=id)
     Hurujs.objects.create(
-        person=sick
+        person=sick,
+        date_times=request.GET.get('times')
     )
+    print(request.GET.get('times'))
+
     sick.is_xuruj = True
     sick.save()
     return redirect('/')
@@ -88,7 +90,9 @@ def create_huruj1(request,id):
     print(request)
     sick = Sick.objects.get(id=id)
     Hurujs.objects.create(
-        person=sick
+        person=sick,
+                date_times=request.GET.get('times')
+
     )
     sick.is_xuruj = True
     sick.save()
@@ -100,7 +104,9 @@ def create_huruj2(request,id):
     print(request)
     sick = Sick.objects.get(id=id)
     Hurujs.objects.create(
-        person=sick
+        person=sick,
+                date_times=request.GET.get('times')
+
     )
     sick.is_xuruj = True
     sick.save()
@@ -120,7 +126,6 @@ def user_create(request):
                 dori_miqdor=request.GET.get('dori_miqdor'),
                 is_xuruj=request.GET.get('tarif'),
                 user=request.user,
-                xulosa='',
             )
 
             return JsonResponse({'data':'data'},safe=False)
